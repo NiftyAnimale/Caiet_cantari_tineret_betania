@@ -98,7 +98,8 @@ Gata! Dacă intri acum pe pagina de GitHub în browser și dai refresh, vei vede
 
 ## Documentație și Referințe Oficiale
 
-* **Manualul Oficial al Pachetului `songs`:** [songs.sourceforge.net/songsdoc/songs.html](http://songs.sourceforge.net/songsdoc/songs.html) – *Documentația completă a tuturor comenzilor (`\beginsong`, `\gtab`, `\transpose`, indexare etc.).*
 * **Ghid LaTeX pentru începători (Overleaf Learn):** [overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) – *Explicații clare despre sintaxa de bază LaTeX.*
-* **Detexify (Recunoaștere simboluri):** [detexify.kirelabs.org/classify.html](https://detexify.kirelabs.org/classify.html) – *Desenezi cu mouse-ul un simbol și îți spune ce comandă LaTeX să folosești.*
+* **Manualul Oficial al Pachetului `songs`:** [songs.sourceforge.net/songsdoc/songs.html](http://songs.sourceforge.net/songsdoc/songs.html) – *Documentația completă a tuturor comenzilor (`\beginsong`, `\gtab`, `\transpose`, indexare etc.).*
+* **Documentația TikZ & PGF (CTAN):** [ctan.org/pkg/pgf](https://ctan.org/pkg/pgf) – *Manualul oficial pentru grafică vectorială, chenare, linii decorative și elemente vizuale personalizate.*
+* **Pachetul `pgfornament` (CTAN):** [ctan.org/pkg/pgfornament](https://ctan.org/pkg/pgfornament) – *Catalogul oficial cu ornamente tipografice vectoriale (viniete, separatoare de pagină, colțare decorative).*
 * **Ghid GitHub Desktop:** [docs.github.com/en/desktop](https://docs.github.com/en/desktop) – *Documentația oficială pentru gestionarea modificărilor și rezolvarea conflictelor.*
