@@ -1,0 +1,33 @@
+\documentclass{article}
+\input{preamble}
+
+\begin{document}
+	
+	% --- COVER PAGE ---
+	\thispagestyle{empty}
+	\AddToShipoutPictureBG*{\BackgroundPic}
+	\null
+	\clearpage
+
+	% Page numbering
+	\setcounter{page}{1}
+	
+	% --- BORDERS & SONGS ---
+	\AddToShipoutPictureBG{\PageBorder}
+	
+	\begin{songs}{titleidx}
+		\input{Cantari/A/A_lui_Isus_venire}
+		\input{Cantari/A/Aceasta_mi-e_dorinta}
+		\input{Cantari/A/Acum_cat_inca_se_mai_poate}
+		\input{Cantari/A/Acum_paraseste_acum}
+		\input{Cantari/A/Ai_deschis_cerul_Tau}
+		\input{Cantari/A/Ai_fost_rastignit}
+		\input{Cantari/A/Ai_platit_un_pret}
+	\end{songs}
+	
+	\clearpage
+	\showindex{Cuprins}{titleidx}
+	% Pentru compilarea indexului: Tools -> External Terminal -> 
+	% songidx titleidx.sxd titleidx.sbx
+	
+\end{document}
