@@ -30,7 +30,7 @@
 \renewcommand{\notebgcolor}{black!13!white}
 \renewcommand{\snumbgcolor}{black!20!white}
 \newindex{titleidx}{titleidx}	% Adăugăm cuprins
-\indexsongsas{titleidx}{\thepage}	% Cuprinsul afișează și pagina
+\indexsongsas{titleidx}{\thesongnum}	% Afișează numărul cântării
 \setlength{\sbarheight}{0pt}	% Delete the bar between songs
 
 % --- COVER IMAGE COMMAND ---
@@ -62,28 +62,43 @@
 		overlay, 
 		every node/.style={inner sep=0pt}
 		]
+		% Se poate folosi 1 cm la shift
+		% #1 pgornament pt colțuri: 61
+		% #2 pgornament pt colturi: 37
+		% #3 pgornament pt colturi: 41
+		% #4 pgornament pt colturi: 63
 		% Colțul Stânga-Sus
-		\node[shift={(1cm,-1cm)},anchor=north west](CNW)
-		at (current page.north west) {\pgfornament[width=1.75cm,color=black!60!white]{61}};
+		\node[shift={(0.5cm,-0.5cm)},anchor=north west](CNW)	
+		at (current page.north west) {\pgfornament[width=1.5cm,color=black!60!white]{41}};
 		
 		% Colțul Dreapta-Sus (oglindit pe verticală)
-		\node[shift={(-1cm,-1cm)},anchor=north east](CNE)
-		at (current page.north east) {\pgfornament[width=1.75cm,symmetry=v,color=black!60!white]{61}};
+		\node[shift={(-0.5cm,-0.5cm)},anchor=north east](CNE)
+		at (current page.north east) {\pgfornament[width=1.5cm,symmetry=v,color=black!60!white]{41}};
 		
 		% Colțul Stânga-Jos (oglindit pe orizontală)
-		\node[shift={(1cm,1cm)},anchor=south west](CSW)
-		at (current page.south west) {\pgfornament[width=1.75cm,symmetry=h,color=black!60!white]{61}};
+		\node[shift={(0.5cm,0.5cm)},anchor=south west](CSW)
+		at (current page.south west) {\pgfornament[width=1.5cm,symmetry=h,color=black!60!white]{41}};
 		
 		% Colțul Dreapta-Jos (oglindit pe ambele axe: v și h)
-		\node[shift={(-1cm,1cm)},anchor=south east](CSE)
-		at (current page.south east) {\pgfornament[width=1.75cm,symmetry=v,symmetry=h,color=black!60!white]{61}};
+		\node[shift={(-0.5cm,0.5cm)},anchor=south east](CSE)
+		at (current page.south east) {\pgfornament[width=1.5cm,symmetry=v,symmetry=h,color=black!60!white]{41}};
 		
+		% Varianta 1
 		% Liniile orizontale (Sus și Jos)
-		\pgfornamentline[color=black!60!white]{CNW.north east}{CNE.north west}{3}{87}
-		\pgfornamentline[color=black!60!white]{CSW.south east}{CSE.south west}{3}{87}
+		%\pgfornamentline[color=black!60!white]{CNW.north east}{CNE.north west}{3}{87}
+		%\pgfornamentline[color=black!60!white]{CSW.south east}{CSE.south west}{3}{87}
 		
 		% Liniile verticale (Stânga și Dreapta - corectat punctul final din dreapta jos!)
-		\pgfornamentline[color=black!60!white]{CNW.south west}{CSW.north west}{4}{87}
-		\pgfornamentline[color=black!60!white]{CNE.south east}{CSE.north east}{4}{87}
+		%\pgfornamentline[color=black!60!white]{CNW.south west}{CSW.north west}{4}{87}
+		%\pgfornamentline[color=black!60!white]{CNE.south east}{CSE.north east}{4}{87}
+		
+		% Varianta 2
+		% Liniile orizontale (Sus și Jos)
+		\pgfornamentline[color=black!60!white]{CNW.north east}{CNE.north west}{3}{88}
+		\pgfornamentline[color=black!60!white]{CSW.south east}{CSE.south west}{3}{88}
+		
+		% Liniile verticale (Stânga și Dreapta - corectat punctul final din dreapta jos!)
+		\pgfornamentline[color=black!60!white]{CNW.south west}{CSW.north west}{4}{88}
+		\pgfornamentline[color=black!60!white]{CNE.south east}{CSE.north east}{4}{88}
 	\end{tikzpicture}%
 }
