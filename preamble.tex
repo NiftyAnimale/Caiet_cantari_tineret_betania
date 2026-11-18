@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{cochineal}
-\usepackage[top=2.3cm,bottom=2.3cm,left=2.3cm,right=2.3cm]{geometry}
+\usepackage[top=1.5cm,bottom=1.5cm,left=2cm,right=2cm]{geometry}
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
 \usepackage{eso-pic}
 \usepackage{graphicx}
@@ -22,16 +22,20 @@
 
 % --- SONG STYLING ---
 \songcolumns{2}
+\renewcommand{\colbotglue}{0pt}
 \columnsep=2cm
-\songpos{1}
+\songpos{0}
+\raggedbottom
 \setlength{\afterpreludeskip}{3pt}
-\setlength{\versesep}{15pt plus 1pt minus 1pt}
+\setlength{\versesep}{15pt}
 \renewcommand\printchord[1]{{\large\sffamily\itshape\color{black!60!white}#1}}
-\renewcommand{\lyricfont}{\normalfont\large}
+\renewcommand{\lyricfont}{\normalfont\fontsize{11}{13}\selectfont} % Fixează atât mărimea fontului (11pt), cât și spațiul dintre rânduri (13pt), fără întindere!
 \renewcommand{\notebgcolor}{black!13!white}
 \renewcommand{\snumbgcolor}{black!20!white}
+
 \newindex{titleidx}{titleidx}	% Creează indexul alfabetic 
 \indexsongsas{titleidx}{\thesongnum}	% Referința din index = numărul cântării
+
 % --- INDEX STYLING (litera deasupra grupului, numarul in stanga titlului) ---
 \makeatletter
 \def\songlink#1#2{#2}% afiseaza doar numarul, fara link
