@@ -11,13 +11,14 @@
 \usetikzlibrary{calc}
 \usepackage[object=vectorian]{pgfornament}
 \usepackage{fancyhdr}
+\usepackage{multicol}
 
 %\newcommand{\SongOrnament}{%
-%	\par\nointerlineskip
-%	\vspace{3pt}%
-%	{\centering\pgfornament[width=0.4\linewidth,color=black!60!white]{89}\par}%
-%	\vspace{3pt}%
-%}
+	%	\par\nointerlineskip
+	%	\vspace{3pt}%
+	%	{\centering\pgfornament[width=0.4\linewidth,color=black!60!white]{89}\par}%
+	%	\vspace{3pt}%
+	%}
 
 % --- SONG STYLING ---
 \songcolumns{2}
@@ -29,10 +30,26 @@
 \renewcommand{\lyricfont}{\normalfont\large}
 \renewcommand{\notebgcolor}{black!13!white}
 \renewcommand{\snumbgcolor}{black!20!white}
-\newindex{titleidx}{titleidx}	% Adăugăm cuprins
-\indexsongsas{titleidx}{\thesongnum}	% Afișează numărul cântării
-\setlength{\sbarheight}{0pt}	% Delete the bar between songs
+\newindex{titleidx}{titleidx}	% Creează indexul alfabetic 
+\indexsongsas{titleidx}{\thesongnum}	% Referința din index = numărul cântării
+% --- INDEX STYLING (litera deasupra grupului, numarul in stanga titlului) ---
+\makeatletter
+\def\songlink#1#2{#2}% afiseaza doar numarul, fara link
 
+\def\idxblock#1{%
+	\par\vspace{1.2em}%
+	\centerline{\normalfont\large\bfseries #1}%
+	\par\nobreak\vspace{0.6em}%
+}
+\def\endidxblock{\par}
+
+\def\idxentry#1#2{%
+	\par\noindent
+	\hangindent=1.5em \hangafter=1
+	#1\dotfill\ #2\par
+}
+\makeatother
+\setlength{\sbarheight}{0pt}	% Delete the bar between songs
 % --- COVER IMAGE COMMAND ---
 \newcommand\BackgroundPic{%
 	\put(0,0){%
