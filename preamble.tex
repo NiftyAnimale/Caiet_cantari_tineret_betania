@@ -40,10 +40,17 @@
 \makeatletter
 \def\songlink#1#2{#2}% afiseaza doar numarul, fara link
 
+\def\lastidxletter{}
 \def\idxblock#1{%
+	\def\curidxletter{#1}%
+	\ifx\curidxletter\lastidxletter
+	\par % aceeași literă ca blocul anterior: fără antet nou
+	\else
 	\par\vspace{1.2em}%
 	\centerline{\normalfont\large\bfseries #1}%
 	\par\nobreak\vspace{0.6em}%
+	\fi
+	\global\let\lastidxletter\curidxletter
 }
 \def\endidxblock{\par}
 
