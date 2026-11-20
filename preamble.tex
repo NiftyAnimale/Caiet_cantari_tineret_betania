@@ -122,11 +122,29 @@
 		
 		% Varianta 2
 		% Liniile orizontale (Sus și Jos)
-		\pgfornamentline[color=black!60!white]{CNW.north east}{CNE.north west}{3}{88}
-		\pgfornamentline[color=black!60!white]{CSW.south east}{CSE.south west}{3}{88}
+		% Linia de sus
+		\pgfornamentline[color=black!60!white]
+		{[yshift=-0.5mm]CNW.north east}
+		{[yshift=-0.5mm]CNE.north west}
+		{3}{88}
+		
+		% Linia de jos
+		\pgfornamentline[color=black!60!white]
+		{[yshift=0.8mm]CSW.south east}
+		{[yshift=0.8mm]CSE.south west}
+		{3}{88}
 		
 		% Liniile verticale (Stânga și Dreapta - corectat punctul final din dreapta jos!)
-		\pgfornamentline[color=black!60!white]{CNW.south west}{CSW.north west}{4}{88}
-		\pgfornamentline[color=black!60!white]{CNE.south east}{CSE.north east}{4}{88}
+		% Linia din stânga
+		\pgfornamentline[color=black!60!white]
+		{[xshift=1.2mm]CNW.south west}
+		{[xshift=1.2mm]CSW.north west}
+		{4}{88}
+		
+		% Linia din dreapta
+		\pgfornamentline[color=black!60!white]
+		{[xshift=-0.8mm]CNE.south east}
+		{[xshift=-0.8mm]CSE.north east}
+		{4}{88}
 	\end{tikzpicture}%
 }
